@@ -1,0 +1,6 @@
+1	A	Eat
+2	B	Earth
+3	C	Eggplant
+4	D	Mammal
+5	E	bonanza
+6	F	balloon
