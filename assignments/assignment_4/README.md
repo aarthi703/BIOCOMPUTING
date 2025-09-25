@@ -1,5 +1,7 @@
 Aarthi Bharathan 09/23/2025 Assignment_4
+
 #Assignment 4 involves using bash scripts and creating paths to save programs, such as gh and seqtk, and make bash scripts that run the instructions/commands that assign these to the $PATH. Moreover, this assignment involves practice with variable assignment with positional arguments and writing for loops to receive desired input from different .fasta files. 
+
 #Task 1: Make a special directory in $HOME called "programs" 
 
 cd 
