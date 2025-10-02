@@ -1,19 +1,21 @@
 #!/bin/bash
 set -ueo pipefail
 
-MAIN_DIR=${HOME}/BIOCOMPUTING/assignments/assignment_5
 
-cd ~/programs
 
-#use wget to download the .tar file, and use tar to unpack the tarball.
+#Use wget to download the .tar file and tar to unpack it.
 
 wget https://gzahn.github.io/data/fastq_examples.tar 
 
 tar -xf fastq_examples.tar
+  
+#move files to data/raw
 
-mv *.fastq.gz ${MAIN_DIR}/data/raw
+mv *fastq.gz ./data/raw/
 
-rm -r fastq_examples.tar 
+#clean
+
+rm *fastq_examples.tar 
 
 
 
