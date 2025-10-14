@@ -168,7 +168,7 @@ cd ../../
 
 #make the script executable.
 
-chmod +x ./scripts/03_run_flye_conda.sh
+chmod a+x ./scripts/03_run_flye_conda.sh
  
 #run it
 
@@ -209,9 +209,9 @@ rm -r 00-assembly 30-contigger 10-consensus 40-polishing 20-repeat *.gfa *.gv *.
 
 cd ../../
 
-#make it executable
+#make it executable for everyone.
 
-chmod +x ./scripts/03_run_flye_module.sh
+chmod a+x ./scripts/03_run_flye_module.sh
 
 #run
 
@@ -259,9 +259,9 @@ rm -r 00-assembly 30-contigger 10-consensus 40-polishing 20-repeat *.gfa *.gv *.
 
 cd ../../
 
-#make it executable 
+#make it executable for everyone.
 
-chmod +x scripts/03_run_flye_local.sh
+chmod a+x scripts/03_run_flye_local.sh
 
 #get rid of the existing program.
 
@@ -318,7 +318,7 @@ tail -n 10 ./assemblies/assembly_local/local_flye.log
 
 
 
-#make it executable.
+#make it executable for everyone.
 
 chmod +x pipeline.sh
 
