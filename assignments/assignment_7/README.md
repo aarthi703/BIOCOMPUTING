@@ -1,4 +1,5 @@
 Aarthi Bharathan 10/20/2025 Assignment_7
+
 Assignment 7 involved taking advantage of the full power of a High Performance Cluster (HPC) by running a slurm job with a pipeline that downloads, cleans, and maps paired-end reads to a reference genome. The programs/special commands used included the ncbi datasets download feature, sra-toolkit (fasterq-dump), bbmap (mapping), and samtools (analyze mapped and matched reads). They were all installed in different ways, including creating/activating a conda environment and loading a module (e.g. for samtools). The status and output of these scripts were stored in err and output files (*.err and *.out).  
 
 #Task 1: Setup assignment_7 directory
@@ -283,11 +284,13 @@ cat assignment_7_228930.err
 cat assignment_7_228930.out 
 
 #Task #8: Table
-#Manually implemented by reading through the .err file
+#Manually implemented by reading through the .err file in a separate terminal.
+
 cat output/assignment_7_228930.err
 
 nano output/table.sh
 
+chmod +x output/table.sh
 
 |--Sample ID--| Total Reads|-----Dog-Mapped Reads----|
 |-------------|------------|-------------------------|
@@ -302,6 +305,7 @@ nano output/table.sh
 | SRR35817858 | 37,885,428 | Read 1: 23, Read 2: 322 |
 | SRR35817859 | 45,371,516 | Read 1: 34, Read 2: 412 |
 | SRR35817860 | 45,618,702 | Read 1: 48, Read 2: 503 |
+
 
 #Task 9
 
