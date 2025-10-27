@@ -1,0 +1,259 @@
+pipeline scripts
+set up directory structure
+download raw data from accessions
+Archive:  /sciclone/home/abharathan01/scr10/data/dog_reference/dog.zip
+  inflating: /sciclone/home/abharathan01/scr10/data/dog_reference/README.md  
+  inflating: /sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/assembly_data_report.jsonl  
+  inflating: /sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna  
+  inflating: /sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/dataset_catalog.json  
+  inflating: /sciclone/home/abharathan01/scr10/data/dog_reference/md5sum.txt  
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817850 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817851 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817852 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817853 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817854 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817855 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817856 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817857 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817858 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817859 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817860 because it was already processed.
+initialize and activate conda environment
+samtools 1.21
+Using htslib 1.21
+Copyright (C) 2024 Genome Research Ltd.
+
+Samtools compilation details:
+    Features:       build=configure curses=yes 
+    CC:             gcc
+    CPPFLAGS:       
+    CFLAGS:         -Wall -g -O2
+    LDFLAGS:        
+    HTSDIR:         htslib-1.21
+    LIBS:           
+    CURSES_LIB:     -lncursesw
+
+HTSlib compilation details:
+    Features:       build=configure libcurl=yes S3=yes GCS=yes libdeflate=no lzma=yes bzip2=yes plugins=no htscodecs=1.6.1
+    CC:             gcc
+    CPPFLAGS:       
+    CFLAGS:         -Wall -g -O2 -fvisibility=hidden
+    LDFLAGS:        -fvisibility=hidden 
+
+HTSlib URL scheme handlers present:
+    built-in:	 file, preload, data
+    S3 Multipart Upload:	 s3w+https, s3w+http, s3w
+    Amazon S3:	 s3+https, s3, s3+http
+    Google Cloud Storage:	 gs+http, gs+https, gs
+    libcurl:	 gophers, smtp, ldaps, smb, rtsp, tftp, pop3, smbs, imaps, pop3s, ftps, https, http, ftp, gopher, imap, sftp, ldap, smtps, scp, dict, mqtt, telnet
+    crypt4gh-needed:	 crypt4gh
+    mem:	 mem
+set up directory structure
+download raw data from accessions
+Dog reference was downloaded.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817850 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817851 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817852 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817853 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817854 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817855 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817856 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817857 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817858 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817859 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817860 because it was already processed.
+initialize and activate conda environment
+samtools 1.21
+Using htslib 1.21
+Copyright (C) 2024 Genome Research Ltd.
+
+Samtools compilation details:
+    Features:       build=configure curses=yes 
+    CC:             gcc
+    CPPFLAGS:       
+    CFLAGS:         -Wall -g -O2
+    LDFLAGS:        
+    HTSDIR:         htslib-1.21
+    LIBS:           
+    CURSES_LIB:     -lncursesw
+
+HTSlib compilation details:
+    Features:       build=configure libcurl=yes S3=yes GCS=yes libdeflate=no lzma=yes bzip2=yes plugins=no htscodecs=1.6.1
+    CC:             gcc
+    CPPFLAGS:       
+    CFLAGS:         -Wall -g -O2 -fvisibility=hidden
+    LDFLAGS:        -fvisibility=hidden 
+
+HTSlib URL scheme handlers present:
+    built-in:	 file, preload, data
+    S3 Multipart Upload:	 s3w+https, s3w+http, s3w
+    Amazon S3:	 s3+https, s3, s3+http
+    Google Cloud Storage:	 gs+http, gs+https, gs
+    libcurl:	 gophers, smtp, ldaps, smb, rtsp, tftp, pop3, smbs, imaps, pop3s, ftps, https, http, ftp, gopher, imap, sftp, ldap, smtps, scp, dict, mqtt, telnet
+    crypt4gh-needed:	 crypt4gh
+    mem:	 mem
+Skipping SRR35817850 — already mapped (./output/SRR35817850_dog-matches.sam exists).
+Skipping SRR35817851 — already mapped (./output/SRR35817851_dog-matches.sam exists).
+Skipping SRR35817852 — already mapped (./output/SRR35817852_dog-matches.sam exists).
+Skipping SRR35817853 — already mapped (./output/SRR35817853_dog-matches.sam exists).
+Skipping SRR35817854 — already mapped (./output/SRR35817854_dog-matches.sam exists).
+Skipping SRR35817855 — already mapped (./output/SRR35817855_dog-matches.sam exists).
+Skipping SRR35817856 — already mapped (./output/SRR35817856_dog-matches.sam exists).
+Skipping SRR35817857 — already mapped (./output/SRR35817857_dog-matches.sam exists).
+Skipping SRR35817858 — already mapped (./output/SRR35817858_dog-matches.sam exists).
+Skipping SRR35817859 — already mapped (./output/SRR35817859_dog-matches.sam exists).
+Skipping SRR35817860 — already mapped (./output/SRR35817860_dog-matches.sam exists).
+set up directory structure
+download raw data from accessions
+Dog reference was downloaded.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817850 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817851 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817852 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817853 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817854 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817855 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817856 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817857 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817858 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817859 because it was already processed.
+parameter expansion to get forward and reverse output from forward and reverse input
+fastp command that trims the first 20 bases and last 30 bases from FWD and REV
+conditional
+Skipping SRR35817860 because it was already processed.
+initialize and activate conda environment
+samtools 1.21
+Using htslib 1.21
+Copyright (C) 2024 Genome Research Ltd.
+
+Samtools compilation details:
+    Features:       build=configure curses=yes 
+    CC:             gcc
+    CPPFLAGS:       
+    CFLAGS:         -Wall -g -O2
+    LDFLAGS:        
+    HTSDIR:         htslib-1.21
+    LIBS:           
+    CURSES_LIB:     -lncursesw
+
+HTSlib compilation details:
+    Features:       build=configure libcurl=yes S3=yes GCS=yes libdeflate=no lzma=yes bzip2=yes plugins=no htscodecs=1.6.1
+    CC:             gcc
+    CPPFLAGS:       
+    CFLAGS:         -Wall -g -O2 -fvisibility=hidden
+    LDFLAGS:        -fvisibility=hidden 
+
+HTSlib URL scheme handlers present:
+    built-in:	 file, preload, data
+    S3 Multipart Upload:	 s3w+https, s3w+http, s3w
+    Amazon S3:	 s3+https, s3, s3+http
+    Google Cloud Storage:	 gs+http, gs+https, gs
+    libcurl:	 gophers, smtp, ldaps, smb, rtsp, tftp, pop3, smbs, imaps, pop3s, ftps, https, http, ftp, gopher, imap, sftp, ldap, smtps, scp, dict, mqtt, telnet
+    crypt4gh-needed:	 crypt4gh
+    mem:	 mem
+Skipping SRR35817850 — already mapped (./output/SRR35817850_dog-matches.sam exists).
+Skipping SRR35817851 — already mapped (./output/SRR35817851_dog-matches.sam exists).
+Skipping SRR35817852 — already mapped (./output/SRR35817852_dog-matches.sam exists).
+Skipping SRR35817853 — already mapped (./output/SRR35817853_dog-matches.sam exists).
+Skipping SRR35817854 — already mapped (./output/SRR35817854_dog-matches.sam exists).
+Skipping SRR35817855 — already mapped (./output/SRR35817855_dog-matches.sam exists).
+Skipping SRR35817856 — already mapped (./output/SRR35817856_dog-matches.sam exists).
+Skipping SRR35817857 — already mapped (./output/SRR35817857_dog-matches.sam exists).
+Skipping SRR35817858 — already mapped (./output/SRR35817858_dog-matches.sam exists).
+Skipping SRR35817859 — already mapped (./output/SRR35817859_dog-matches.sam exists).
+Skipping SRR35817860 — already mapped (./output/SRR35817860_dog-matches.sam exists).

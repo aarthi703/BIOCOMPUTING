@@ -1,0 +1,47 @@
+#!/bin/bash
+
+set -euo pipefail
+
+echo "initialize and activate conda environment"
+
+
+module load miniforge3
+
+source /sciclone/apps/miniforge3-24.9.2-0/etc/profile.d/conda.sh
+
+
+conda activate bbmap-env
+
+
+REF="${HOME}/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna"
+
+#samtools
+
+module load samtools/gcc-11.4.1/
+
+samtools --version
+
+
+
+for i in ${HOME}/scr10/data/clean/*_1_*
+
+do
+
+BASE=$(basename "$i" _1_cleaned_trimmed.fastq.gz)
+
+REV="${HOME}/scr10/data/clean/${BASE}_2_cleaned_trimmed.fastq.gz"
+
+SAM_OUTPUT="./output/${BASE}.sam"
+
+
+if [[ -f ./output/${BASE}_dog-matches.sam ]]; then
+    echo "Skipping ${BASE} — already mapped (./output/${BASE}_dog-matches.sam exists)."
+    continue
+fi
+
+
+bbmap.sh -Xmx20g ref=${REF} in1=${i} in2=${REV} out=${SAM_OUTPUT} nodisk=t ambiguous=best minid=0.95
+
+samtools view -F 4 -h ${SAM_OUTPUT} > ./output/${BASE}_dog-matches.sam
+
+done
