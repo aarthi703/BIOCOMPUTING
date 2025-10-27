@@ -4,11 +4,11 @@ set -euo pipefail
 
 echo "initialize and activate conda environment"
 
-
 module load miniforge3
 
 source /sciclone/apps/miniforge3-24.9.2-0/etc/profile.d/conda.sh
 
+echo "If you need to create the environment: conda create -y -n bbmap-env bbmap -c bioconda"
 
 conda activate bbmap-env
 
