@@ -1,4 +1,5 @@
-10/19/2025 Aarthi Bharathan Assignment_7
+Aarthi Bharathan 10/20/2025 Assignment_7
+Assignment 7 involved taking advantage of the full power of a High Performance Cluster (HPC) by running a slurm job with a pipeline that downloads, cleans, and maps paired-end reads to a reference genome. The programs/special commands used included the ncbi datasets download feature, sra-toolkit (fasterq-dump), bbmap (mapping), and samtools (analyze mapped and matched reads). They were all installed in different ways, including creating/activating a conda environment and loading a module (e.g. for samtools). The status and output of these scripts were stored in err and output files (*.err and *.out).  
 
 #Task 1: Setup assignment_7 directory
 
@@ -232,6 +233,7 @@ done
 
 
 #Task 6: Slurm
+nano assignment_7.slurm
 
 #!/bin/bash
 #SBATCH --job-name=assignment_7
@@ -261,6 +263,10 @@ bash ./scripts/03_map_reads.sh
 #The job name is assignment_7, this is one task that uses one node, but 20 cpus were used to make the job faster, such that the different cores split the work. A time limit of one day was given to be safe 
 #and 120G of memory was set to be safe as well. My email was given to get updates about when my job began, failed, ended. 
 #The output and error files contain the information about the job's status, (*.out and *.err respectively).
+
+#run the pipeline!
+
+sbatch assignment_7.slurm
 
 #Task #7: Check output files
 
@@ -299,6 +305,15 @@ nano output/table.sh
 
 #Task 9
 
+#Reflection
+
+>>This assignment was a hefty one, and it definitely took the most patience and learning in comparison to the other assignments. Before even starting the assignment, I was apprehensive of failed jobs, big files living in spaces where they should not be, and time limits not being met by the deadline. I was grateful that a part of last class was spent learning about conditionals via ChatGPT. I had many failed jobs, but they would cut off midway somewhere, so it was a relief knowing that I did not have to start over, when part of the task was already completed. 
+
+>>The most challenging part of this assignment was ensuring that file paths were not bungled and causing traffic. I still struggle with maintaining the correct file paths, and it often took me a long time to address the error because I was constantly switching between the scr10 space and my BIOCOMPUTING/assignments/assignment_7 directory. Additionally, waking up to an email about a failed job was also disappointing, but it was part of the learning process of this skill.
+
+>>Also, I have only ever submitted small jobs that would take a maximum of 30 minutes to run outside of this class, so the practice with large files was a way for me to learn how to address errors in my scripts quicker. Moreover, patience was a key skill to have in this assignment. Not only did the jobs take a while to complete, but writing the scripts was also difficult for me because of the different file paths and forgotten parameters. I had to make sure I was hopping between assignments and lessons to recheck parameters and confirm new ones I have never seen with ChatGPT. In fact, this assignment also drove more interactions with the agent to maximize efficiency. 
+
+>>Overall, I learned about the effectiveness and mass task completion that can be achieved via an HPC pipeline. This taught me how real, large data can be manipulated if the full power of the HPC is taken advantage of. While this assignment was a scary big step forward, where it was away from the familiar with manageable files and shorter tasks, it was also a good first exposure to the reality of a bioinformatician’s day and the main purpose of the HPC.
 
 
 
@@ -308,11 +323,4 @@ nano output/table.sh
 
 
 
-
-
-
-
-
-^G Help       ^O Write Out  ^W Where Is   ^K Cut        ^T Execute    ^C Location   M-U Undo
-^X Exit       ^R Read File  ^\ Replace    ^U Paste      ^J Justify    ^_ Go To Line M-E Redo
 
