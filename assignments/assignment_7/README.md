@@ -187,6 +187,9 @@ source /sciclone/apps/miniforge3-24.9.2-0/etc/profile.d/conda.sh
 
 conda activate bbmap-env
 
+conda env export --no-builds > bbmap-env.yml
+
+
 #preset the reference variable, as the reference data lives in the ncbi_dataset data directory within the scratch space in the data/dog_reference directory. 
  
 REF="${HOME}/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna"
