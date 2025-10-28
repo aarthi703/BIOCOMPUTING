@@ -232,7 +232,7 @@ samtools view -F 4 -h ${SAM_OUTPUT} > ./output/${BASE}_dog-matches.sam
 done
 
 
-
+conda deactivate
 
 
 

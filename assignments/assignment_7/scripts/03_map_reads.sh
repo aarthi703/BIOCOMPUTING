@@ -43,6 +43,9 @@ fi
 
 bbmap.sh -Xmx20g ref=${REF} in1=${i} in2=${REV} out=${SAM_OUTPUT} nodisk=t ambiguous=best minid=0.95
 
+
 samtools view -F 4 -h ${SAM_OUTPUT} > ./output/${BASE}_dog-matches.sam
 
 done
+
+conda deactivate
