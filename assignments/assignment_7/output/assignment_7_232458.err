@@ -1,0 +1,549 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 18.5M  100 18.5M    0     0  50.4M      0 --:--:-- --:--:-- --:--:-- 50.3M
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 24.9.2
+    latest version: 25.9.1
+
+Please update conda by running
+
+    $ conda update -n base -c conda-forge conda
+
+
+java -ea -Xmx20g -Xms20g -cp /sciclone/home/abharathan01/.conda/envs/bbmap-env/opt/bbmap-39.01-1/current/ align2.BBMap build=1 overwrite=true fastareadlen=500 -Xmx20g ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817850_1_cleaned_trimmed.fastq.gz in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817850_2_cleaned_trimmed.fastq.gz out=/sciclone/home/abharathan01/scr10/output/SRR35817850.sam nodisk=t ambiguous=best minid=0.95
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, -Xmx20g, ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817850_1_cleaned_trimmed.fastq.gz, in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817850_2_cleaned_trimmed.fastq.gz, out=/sciclone/home/abharathan01/scr10/output/SRR35817850.sam, nodisk=t, ambiguous=best, minid=0.95]
+Version 39.01
+
+Retaining first best site only for ambiguous mappings.
+Set MINIMUM_ALIGNMENT_SCORE_RATIO to 0.908
+Executing dna.FastaToChromArrays2 [/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, 1, writeinthread=false, genscaffoldinfo=true, retain, waitforwriting=false, gz=true, maxlen=536670912, writechroms=false, minscaf=1, midpad=300, startpad=8000, stoppad=8000, nodisk=true]
+
+Set genScaffoldInfo=true
+Set genome to 1
+
+Loaded Reference:	0.013 seconds.
+Loading index for chunk 1-5, build 1
+Indexing threads started for block 0-3
+Indexing threads started for block 4-5
+Indexing threads finished for block 4-5
+Indexing threads finished for block 0-3
+Generated Index:	111.844 seconds.
+Analyzed Index:   	7.695 seconds.
+Started output stream:	3.996 seconds.
+Cleared Memory:    	0.116 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 20 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.9081
+Mapping Mode:         	normal
+Reads Used:           	44822254	(4527046804 bases)
+
+Mapping:          	3943.937 seconds.
+Reads/sec:       	11364.85
+kBases/sec:      	1147.85
+
+
+Pairing data:   	pct pairs	num pairs 	pct bases	   num bases
+
+mated pairs:     	  0.0000% 	        2 	  0.0000% 	         404
+bad pairs:       	  0.0000% 	        1 	  0.0000% 	         202
+insert size avg: 	  117.50
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0001% 	       27 	  0.0001% 	        2727
+unambiguous:     	  0.0000% 	        8 	  0.0000% 	         808
+ambiguous:       	  0.0001% 	       19 	  0.0001% 	        1919
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0000% 	        1 	  0.0000% 	         101
+semiperfect site:	  0.0000% 	        1 	  0.0000% 	         101
+rescued:         	  0.0000% 	        3
+
+Match Rate:      	      NA 	       NA 	 97.6164% 	        2662
+Error Rate:      	 96.2963% 	       26 	  2.3836% 	          65
+Sub Rate:        	 96.2963% 	       26 	  2.3836% 	          65
+Del Rate:        	  0.0000% 	        0 	  0.0000% 	           0
+Ins Rate:        	  0.0000% 	        0 	  0.0000% 	           0
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0008% 	      173 	  0.0008% 	       17473
+unambiguous:     	  0.0004% 	       98 	  0.0004% 	        9898
+ambiguous:       	  0.0003% 	       75 	  0.0003% 	        7575
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0001% 	       13 	  0.0001% 	        1313
+semiperfect site:	  0.0001% 	       13 	  0.0001% 	        1313
+rescued:         	  0.0000% 	        1
+
+Match Rate:      	      NA 	       NA 	 97.8538% 	       17098
+Error Rate:      	 92.4855% 	      160 	  2.1462% 	         375
+Sub Rate:        	 92.4855% 	      160 	  2.1404% 	         374
+Del Rate:        	  0.0000% 	        0 	  0.0000% 	           0
+Ins Rate:        	  0.5780% 	        1 	  0.0057% 	           1
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+Total time:     	4179.401 seconds.
+java -ea -Xmx20g -Xms20g -cp /sciclone/home/abharathan01/.conda/envs/bbmap-env/opt/bbmap-39.01-1/current/ align2.BBMap build=1 overwrite=true fastareadlen=500 -Xmx20g ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817851_1_cleaned_trimmed.fastq.gz in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817851_2_cleaned_trimmed.fastq.gz out=/sciclone/home/abharathan01/scr10/output/SRR35817851.sam nodisk=t ambiguous=best minid=0.95
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, -Xmx20g, ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817851_1_cleaned_trimmed.fastq.gz, in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817851_2_cleaned_trimmed.fastq.gz, out=/sciclone/home/abharathan01/scr10/output/SRR35817851.sam, nodisk=t, ambiguous=best, minid=0.95]
+Version 39.01
+
+Retaining first best site only for ambiguous mappings.
+Set MINIMUM_ALIGNMENT_SCORE_RATIO to 0.908
+Executing dna.FastaToChromArrays2 [/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, 1, writeinthread=false, genscaffoldinfo=true, retain, waitforwriting=false, gz=true, maxlen=536670912, writechroms=false, minscaf=1, midpad=300, startpad=8000, stoppad=8000, nodisk=true]
+
+Set genScaffoldInfo=true
+Set genome to 1
+
+Loaded Reference:	0.012 seconds.
+Loading index for chunk 1-5, build 1
+Indexing threads started for block 0-3
+Indexing threads started for block 4-5
+Indexing threads finished for block 4-5
+Indexing threads finished for block 0-3
+Generated Index:	113.489 seconds.
+Analyzed Index:   	7.914 seconds.
+Started output stream:	2.843 seconds.
+Cleared Memory:    	0.116 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 20 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.9081
+Mapping Mode:         	normal
+Reads Used:           	37855056	(3823359668 bases)
+
+Mapping:          	3800.434 seconds.
+Reads/sec:       	9960.72
+kBases/sec:      	1006.03
+
+
+Pairing data:   	pct pairs	num pairs 	pct bases	   num bases
+
+mated pairs:     	  0.0000% 	        7 	  0.0000% 	        1414
+bad pairs:       	  0.0000% 	        4 	  0.0000% 	         808
+insert size avg: 	  112.71
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0002% 	       38 	  0.0002% 	        3838
+unambiguous:     	  0.0001% 	       12 	  0.0001% 	        1212
+ambiguous:       	  0.0001% 	       26 	  0.0001% 	        2626
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0000% 	        2 	  0.0000% 	         202
+semiperfect site:	  0.0000% 	        2 	  0.0000% 	         202
+rescued:         	  0.0000% 	        5
+
+Match Rate:      	      NA 	       NA 	 97.4219% 	        3741
+Error Rate:      	 94.7368% 	       36 	  2.5781% 	          99
+Sub Rate:        	 92.1053% 	       35 	  2.5000% 	          96
+Del Rate:        	  5.2632% 	        2 	  0.0521% 	           2
+Ins Rate:        	  2.6316% 	        1 	  0.0260% 	           1
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0010% 	      180 	  0.0010% 	       18180
+unambiguous:     	  0.0005% 	       87 	  0.0005% 	        8787
+ambiguous:       	  0.0005% 	       93 	  0.0005% 	        9393
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0001% 	       13 	  0.0001% 	        1313
+semiperfect site:	  0.0001% 	       14 	  0.0001% 	        1414
+rescued:         	  0.0000% 	        3
+
+Match Rate:      	      NA 	       NA 	 97.8718% 	       17797
+Error Rate:      	 92.7778% 	      167 	  2.1282% 	         387
+Sub Rate:        	 92.2222% 	      166 	  2.0952% 	         381
+Del Rate:        	  1.6667% 	        3 	  0.0220% 	           4
+Ins Rate:        	  0.5556% 	        1 	  0.0110% 	           2
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+Total time:     	3942.639 seconds.
+java -ea -Xmx20g -Xms20g -cp /sciclone/home/abharathan01/.conda/envs/bbmap-env/opt/bbmap-39.01-1/current/ align2.BBMap build=1 overwrite=true fastareadlen=500 -Xmx20g ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817852_1_cleaned_trimmed.fastq.gz in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817852_2_cleaned_trimmed.fastq.gz out=/sciclone/home/abharathan01/scr10/output/SRR35817852.sam nodisk=t ambiguous=best minid=0.95
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, -Xmx20g, ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817852_1_cleaned_trimmed.fastq.gz, in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817852_2_cleaned_trimmed.fastq.gz, out=/sciclone/home/abharathan01/scr10/output/SRR35817852.sam, nodisk=t, ambiguous=best, minid=0.95]
+Version 39.01
+
+Retaining first best site only for ambiguous mappings.
+Set MINIMUM_ALIGNMENT_SCORE_RATIO to 0.908
+Executing dna.FastaToChromArrays2 [/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, 1, writeinthread=false, genscaffoldinfo=true, retain, waitforwriting=false, gz=true, maxlen=536670912, writechroms=false, minscaf=1, midpad=300, startpad=8000, stoppad=8000, nodisk=true]
+
+Set genScaffoldInfo=true
+Set genome to 1
+
+Loaded Reference:	0.012 seconds.
+Loading index for chunk 1-5, build 1
+Indexing threads started for block 4-5
+Indexing threads started for block 0-3
+Indexing threads finished for block 4-5
+Indexing threads finished for block 0-3
+Generated Index:	119.170 seconds.
+Analyzed Index:   	8.239 seconds.
+Started output stream:	5.171 seconds.
+Cleared Memory:    	0.115 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 20 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.9081
+Mapping Mode:         	normal
+Reads Used:           	42216280	(4263843670 bases)
+
+Mapping:          	3598.414 seconds.
+Reads/sec:       	11731.91
+kBases/sec:      	1184.92
+
+
+Pairing data:   	pct pairs	num pairs 	pct bases	   num bases
+
+mated pairs:     	  0.0001% 	       11 	  0.0001% 	        2222
+bad pairs:       	  0.0000% 	        2 	  0.0000% 	         404
+insert size avg: 	  120.00
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0001% 	       31 	  0.0001% 	        3131
+unambiguous:     	  0.0001% 	       14 	  0.0001% 	        1414
+ambiguous:       	  0.0001% 	       17 	  0.0001% 	        1717
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0000% 	        2 	  0.0000% 	         202
+semiperfect site:	  0.0000% 	        2 	  0.0000% 	         202
+rescued:         	  0.0000% 	        8
+
+Match Rate:      	      NA 	       NA 	 97.4768% 	        3052
+Error Rate:      	 93.5484% 	       29 	  2.5232% 	          79
+Sub Rate:        	 93.5484% 	       29 	  2.4593% 	          77
+Del Rate:        	  0.0000% 	        0 	  0.0000% 	           0
+Ins Rate:        	  6.4516% 	        2 	  0.0639% 	           2
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0008% 	      168 	  0.0008% 	       16968
+unambiguous:     	  0.0004% 	       93 	  0.0004% 	        9393
+ambiguous:       	  0.0004% 	       75 	  0.0004% 	        7575
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0001% 	       16 	  0.0001% 	        1616
+semiperfect site:	  0.0001% 	       16 	  0.0001% 	        1616
+rescued:         	  0.0000% 	        5
+
+Match Rate:      	      NA 	       NA 	 98.0501% 	       16644
+Error Rate:      	 90.4762% 	      152 	  1.9499% 	         331
+Sub Rate:        	 89.2857% 	      150 	  1.8969% 	         322
+Del Rate:        	  1.7857% 	        3 	  0.0412% 	           7
+Ins Rate:        	  1.1905% 	        2 	  0.0118% 	           2
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+Total time:     	3748.411 seconds.
+java -ea -Xmx20g -Xms20g -cp /sciclone/home/abharathan01/.conda/envs/bbmap-env/opt/bbmap-39.01-1/current/ align2.BBMap build=1 overwrite=true fastareadlen=500 -Xmx20g ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817853_1_cleaned_trimmed.fastq.gz in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817853_2_cleaned_trimmed.fastq.gz out=/sciclone/home/abharathan01/scr10/output/SRR35817853.sam nodisk=t ambiguous=best minid=0.95
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, -Xmx20g, ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817853_1_cleaned_trimmed.fastq.gz, in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817853_2_cleaned_trimmed.fastq.gz, out=/sciclone/home/abharathan01/scr10/output/SRR35817853.sam, nodisk=t, ambiguous=best, minid=0.95]
+Version 39.01
+
+Retaining first best site only for ambiguous mappings.
+Set MINIMUM_ALIGNMENT_SCORE_RATIO to 0.908
+Executing dna.FastaToChromArrays2 [/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, 1, writeinthread=false, genscaffoldinfo=true, retain, waitforwriting=false, gz=true, maxlen=536670912, writechroms=false, minscaf=1, midpad=300, startpad=8000, stoppad=8000, nodisk=true]
+
+Set genScaffoldInfo=true
+Set genome to 1
+
+Loaded Reference:	0.012 seconds.
+Loading index for chunk 1-5, build 1
+Indexing threads started for block 0-3
+Indexing threads started for block 4-5
+Indexing threads finished for block 4-5
+Indexing threads finished for block 0-3
+Generated Index:	112.725 seconds.
+Analyzed Index:   	8.282 seconds.
+Started output stream:	0.333 seconds.
+Cleared Memory:    	0.119 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 20 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.9081
+Mapping Mode:         	normal
+Reads Used:           	42364684	(4278832538 bases)
+
+Mapping:          	3536.029 seconds.
+Reads/sec:       	11980.87
+kBases/sec:      	1210.07
+
+
+Pairing data:   	pct pairs	num pairs 	pct bases	   num bases
+
+mated pairs:     	  0.0000% 	       10 	  0.0000% 	        2020
+bad pairs:       	  0.0000% 	        3 	  0.0000% 	         606
+insert size avg: 	  124.60
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0001% 	       29 	  0.0001% 	        2929
+unambiguous:     	  0.0001% 	       13 	  0.0001% 	        1313
+ambiguous:       	  0.0001% 	       16 	  0.0001% 	        1616
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0000% 	        2 	  0.0000% 	         202
+semiperfect site:	  0.0000% 	        2 	  0.0000% 	         202
+rescued:         	  0.0000% 	        7
+
+Match Rate:      	      NA 	       NA 	 96.9956% 	        2841
+Error Rate:      	 93.1034% 	       27 	  3.0044% 	          88
+Sub Rate:        	 89.6552% 	       26 	  2.9703% 	          87
+Del Rate:        	  0.0000% 	        0 	  0.0000% 	           0
+Ins Rate:        	  3.4483% 	        1 	  0.0341% 	           1
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0014% 	      290 	  0.0014% 	       29290
+unambiguous:     	  0.0008% 	      159 	  0.0008% 	       16059
+ambiguous:       	  0.0006% 	      131 	  0.0006% 	       13231
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0001% 	       29 	  0.0001% 	        2929
+semiperfect site:	  0.0001% 	       30 	  0.0001% 	        3030
+rescued:         	  0.0000% 	        1
+
+Match Rate:      	      NA 	       NA 	 97.9107% 	       28680
+Error Rate:      	 90.0000% 	      261 	  2.0893% 	         612
+Sub Rate:        	 89.6552% 	      260 	  2.0620% 	         604
+Del Rate:        	  0.3448% 	        1 	  0.0068% 	           2
+Ins Rate:        	  1.7241% 	        5 	  0.0205% 	           6
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+Total time:     	3674.564 seconds.
+java -ea -Xmx20g -Xms20g -cp /sciclone/home/abharathan01/.conda/envs/bbmap-env/opt/bbmap-39.01-1/current/ align2.BBMap build=1 overwrite=true fastareadlen=500 -Xmx20g ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817854_1_cleaned_trimmed.fastq.gz in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817854_2_cleaned_trimmed.fastq.gz out=/sciclone/home/abharathan01/scr10/output/SRR35817854.sam nodisk=t ambiguous=best minid=0.95
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, -Xmx20g, ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817854_1_cleaned_trimmed.fastq.gz, in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817854_2_cleaned_trimmed.fastq.gz, out=/sciclone/home/abharathan01/scr10/output/SRR35817854.sam, nodisk=t, ambiguous=best, minid=0.95]
+Version 39.01
+
+Retaining first best site only for ambiguous mappings.
+Set MINIMUM_ALIGNMENT_SCORE_RATIO to 0.908
+Executing dna.FastaToChromArrays2 [/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, 1, writeinthread=false, genscaffoldinfo=true, retain, waitforwriting=false, gz=true, maxlen=536670912, writechroms=false, minscaf=1, midpad=300, startpad=8000, stoppad=8000, nodisk=true]
+
+Set genScaffoldInfo=true
+Set genome to 1
+
+Loaded Reference:	0.013 seconds.
+Loading index for chunk 1-5, build 1
+Indexing threads started for block 0-3
+Indexing threads started for block 4-5
+Indexing threads finished for block 4-5
+Indexing threads finished for block 0-3
+Generated Index:	106.592 seconds.
+Analyzed Index:   	7.610 seconds.
+Started output stream:	0.198 seconds.
+Cleared Memory:    	0.116 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 20 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.9081
+Mapping Mode:         	normal
+Reads Used:           	44110702	(4455180184 bases)
+
+Mapping:          	3446.804 seconds.
+Reads/sec:       	12797.57
+kBases/sec:      	1292.55
+
+
+Pairing data:   	pct pairs	num pairs 	pct bases	   num bases
+
+mated pairs:     	  0.0001% 	       22 	  0.0001% 	        4444
+bad pairs:       	  0.0000% 	       10 	  0.0000% 	        2020
+insert size avg: 	  141.36
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0003% 	       70 	  0.0003% 	        7070
+unambiguous:     	  0.0001% 	       26 	  0.0001% 	        2626
+ambiguous:       	  0.0002% 	       44 	  0.0002% 	        4444
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0000% 	        1 	  0.0000% 	         101
+semiperfect site:	  0.0000% 	        2 	  0.0000% 	         202
+rescued:         	  0.0000% 	        7
+
+Match Rate:      	      NA 	       NA 	 97.2289% 	        6877
+Error Rate:      	 98.5714% 	       69 	  2.7711% 	         196
+Sub Rate:        	 95.7143% 	       67 	  2.6863% 	         190
+Del Rate:        	  2.8571% 	        2 	  0.0424% 	           3
+Ins Rate:        	  4.2857% 	        3 	  0.0424% 	           3
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0011% 	      233 	  0.0011% 	       23533
+unambiguous:     	  0.0006% 	      130 	  0.0006% 	       13130
+ambiguous:       	  0.0005% 	      103 	  0.0005% 	       10403
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0001% 	       19 	  0.0001% 	        1919
+semiperfect site:	  0.0001% 	       19 	  0.0001% 	        1919
+rescued:         	  0.0001% 	       20
+
+Match Rate:      	      NA 	       NA 	 97.7826% 	       23019
+Error Rate:      	 91.8455% 	      214 	  2.2174% 	         522
+Sub Rate:        	 91.4163% 	      213 	  2.1707% 	         511
+Del Rate:        	  0.8584% 	        2 	  0.0340% 	           8
+Ins Rate:        	  0.8584% 	        2 	  0.0127% 	           3
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+Total time:     	3580.169 seconds.
+java -ea -Xmx20g -Xms20g -cp /sciclone/home/abharathan01/.conda/envs/bbmap-env/opt/bbmap-39.01-1/current/ align2.BBMap build=1 overwrite=true fastareadlen=500 -Xmx20g ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817855_1_cleaned_trimmed.fastq.gz in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817855_2_cleaned_trimmed.fastq.gz out=/sciclone/home/abharathan01/scr10/output/SRR35817855.sam nodisk=t ambiguous=best minid=0.95
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, -Xmx20g, ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817855_1_cleaned_trimmed.fastq.gz, in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817855_2_cleaned_trimmed.fastq.gz, out=/sciclone/home/abharathan01/scr10/output/SRR35817855.sam, nodisk=t, ambiguous=best, minid=0.95]
+Version 39.01
+
+Retaining first best site only for ambiguous mappings.
+Set MINIMUM_ALIGNMENT_SCORE_RATIO to 0.908
+Executing dna.FastaToChromArrays2 [/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, 1, writeinthread=false, genscaffoldinfo=true, retain, waitforwriting=false, gz=true, maxlen=536670912, writechroms=false, minscaf=1, midpad=300, startpad=8000, stoppad=8000, nodisk=true]
+
+Set genScaffoldInfo=true
+Set genome to 1
+
+Loaded Reference:	0.014 seconds.
+Loading index for chunk 1-5, build 1
+Indexing threads started for block 0-3
+Indexing threads started for block 4-5
+Indexing threads finished for block 4-5
+Indexing threads finished for block 0-3
+Generated Index:	113.054 seconds.
+Analyzed Index:   	8.278 seconds.
+Started output stream:	0.192 seconds.
+Cleared Memory:    	0.118 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 20 mapping threads.
+Detecting finished threads: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19
+
+   ------------------   Results   ------------------   
+
+Genome:                	1
+Key Length:            	13
+Max Indel:             	16000
+Minimum Score Ratio:  	0.9081
+Mapping Mode:         	normal
+Reads Used:           	47261754	(4773436032 bases)
+
+Mapping:          	4135.012 seconds.
+Reads/sec:       	11429.65
+kBases/sec:      	1154.39
+
+
+Pairing data:   	pct pairs	num pairs 	pct bases	   num bases
+
+mated pairs:     	  0.0000% 	        6 	  0.0000% 	        1212
+bad pairs:       	  0.0000% 	        2 	  0.0000% 	         404
+insert size avg: 	  136.50
+
+
+Read 1 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0001% 	       26 	  0.0001% 	        2626
+unambiguous:     	  0.0000% 	       10 	  0.0000% 	        1010
+ambiguous:       	  0.0001% 	       16 	  0.0001% 	        1616
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0000% 	        4 	  0.0000% 	         404
+semiperfect site:	  0.0000% 	        5 	  0.0000% 	         505
+rescued:         	  0.0000% 	        4
+
+Match Rate:      	      NA 	       NA 	 95.3800% 	        2560
+Error Rate:      	 84.6154% 	       22 	  4.6200% 	         124
+Sub Rate:        	 84.6154% 	       22 	  2.4590% 	          66
+Del Rate:        	  7.6923% 	        2 	  2.1610% 	          58
+Ins Rate:        	  0.0000% 	        0 	  0.0000% 	           0
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+
+Read 2 data:      	pct reads	num reads 	pct bases	   num bases
+
+mapped:          	  0.0012% 	      283 	  0.0012% 	       28583
+unambiguous:     	  0.0006% 	      133 	  0.0006% 	       13433
+ambiguous:       	  0.0006% 	      150 	  0.0006% 	       15150
+low-Q discards:  	  0.0000% 	        0 	  0.0000% 	           0
+
+perfect best site:	  0.0001% 	       17 	  0.0001% 	        1717
+semiperfect site:	  0.0001% 	       17 	  0.0001% 	        1717
+rescued:         	  0.0000% 	        1
+
+Match Rate:      	      NA 	       NA 	 97.9573% 	       28006
+Error Rate:      	 93.9929% 	      266 	  2.0427% 	         584
+Sub Rate:        	 93.2862% 	      264 	  2.0147% 	         576
+Del Rate:        	  1.7668% 	        5 	  0.0245% 	           7
+Ins Rate:        	  0.3534% 	        1 	  0.0035% 	           1
+N Rate:          	  0.0000% 	        0 	  0.0000% 	           0
+
+Total time:     	4274.299 seconds.
+java -ea -Xmx20g -Xms20g -cp /sciclone/home/abharathan01/.conda/envs/bbmap-env/opt/bbmap-39.01-1/current/ align2.BBMap build=1 overwrite=true fastareadlen=500 -Xmx20g ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817856_1_cleaned_trimmed.fastq.gz in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817856_2_cleaned_trimmed.fastq.gz out=/sciclone/home/abharathan01/scr10/output/SRR35817856.sam nodisk=t ambiguous=best minid=0.95
+Executing align2.BBMap [build=1, overwrite=true, fastareadlen=500, -Xmx20g, ref=/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, in1=/sciclone/home/abharathan01/scr10/data/clean/SRR35817856_1_cleaned_trimmed.fastq.gz, in2=/sciclone/home/abharathan01/scr10/data/clean/SRR35817856_2_cleaned_trimmed.fastq.gz, out=/sciclone/home/abharathan01/scr10/output/SRR35817856.sam, nodisk=t, ambiguous=best, minid=0.95]
+Version 39.01
+
+Retaining first best site only for ambiguous mappings.
+Set MINIMUM_ALIGNMENT_SCORE_RATIO to 0.908
+Executing dna.FastaToChromArrays2 [/sciclone/home/abharathan01/scr10/data/dog_reference/ncbi_dataset/data/GCF_011100685.1/GCF_011100685.1_UU_Cfam_GSD_1.0_genomic.fna, 1, writeinthread=false, genscaffoldinfo=true, retain, waitforwriting=false, gz=true, maxlen=536670912, writechroms=false, minscaf=1, midpad=300, startpad=8000, stoppad=8000, nodisk=true]
+
+Set genScaffoldInfo=true
+Set genome to 1
+
+Loaded Reference:	0.013 seconds.
+Loading index for chunk 1-5, build 1
+Indexing threads started for block 0-3
+Indexing threads started for block 4-5
+Indexing threads finished for block 4-5
+Indexing threads finished for block 0-3
+Generated Index:	127.291 seconds.
+Analyzed Index:   	7.908 seconds.
+Started output stream:	0.089 seconds.
+Cleared Memory:    	0.114 seconds.
+Processing reads in paired-ended mode.
+Started read stream.
+Started 20 mapping threads.
+slurmstepd: error: *** JOB 232458 ON bo51 CANCELLED AT 2025-10-28T21:28:36 ***

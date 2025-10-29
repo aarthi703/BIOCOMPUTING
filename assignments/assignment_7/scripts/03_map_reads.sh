@@ -10,6 +10,8 @@ source /sciclone/apps/miniforge3-24.9.2-0/etc/profile.d/conda.sh
 
 echo "If you need to create the environment: conda create -y -n bbmap-env bbmap -c bioconda"
 
+conda create -y -n bbmap-env bbmap -c bioconda
+
 conda activate bbmap-env
 
 conda env export --no-builds > bbmap-env.yml
@@ -32,11 +34,11 @@ BASE=$(basename "$i" _1_cleaned_trimmed.fastq.gz)
 
 REV="${HOME}/scr10/data/clean/${BASE}_2_cleaned_trimmed.fastq.gz"
 
-SAM_OUTPUT="./output/${BASE}.sam"
+SAM_OUTPUT="${HOME}/scr10/output/${BASE}.sam"
 
 
-if [[ -f ./output/${BASE}_dog-matches.sam ]]; then
-    echo "Skipping ${BASE} — already mapped (./output/${BASE}_dog-matches.sam exists)."
+if [[ -f ${HOME}/scr10/output/${BASE}_dog-matches.sam ]]; then
+    echo "Skipping ${BASE} — already mapped (${HOME}/scr10/output/${BASE}_dog-matches.sam exists)."
     continue
 fi
 
@@ -44,7 +46,7 @@ fi
 bbmap.sh -Xmx20g ref=${REF} in1=${i} in2=${REV} out=${SAM_OUTPUT} nodisk=t ambiguous=best minid=0.95
 
 
-samtools view -F 4 -h ${SAM_OUTPUT} > ./output/${BASE}_dog-matches.sam
+samtools view -F 4 -h ${SAM_OUTPUT} > ${HOME}/scr10/output/${BASE}_dog-matches.sam
 
 done
 

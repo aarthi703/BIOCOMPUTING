@@ -39,9 +39,10 @@ mkdir -p data/{clean,dog_reference,raw} output scripts
 
 #set up another directory structure in scr10 so that big files can stay there before being pushed to github.
 
-mkdir -p ~/scr10/data
 
 mkdir -p ~/scr10/data/{raw,clean,dog_reference}
+
+mkdir -p ${HOME}/scr10/output
 
 #export path
 
@@ -54,7 +55,7 @@ echo "download raw data from accessions"
 for i in $(cat data/SraRunTable.csv | cut -d "," -f1 | tail -n +2); do
     if [ ! -f "${HOME}/scr10/data/raw/${i}_1.fastq" ] && [ ! -f "${HOME}/scr10/data/raw/${i}_2.fastq" ]; then
         echo "Downloading $i..."
-        fasterq-dump --threads 8 $i -O ~/scr10/data/raw/
+        fasterq-dump --threads 8 $i -O ${HOME}/scr10/data/raw/
 
     fi
 done
@@ -68,8 +69,8 @@ chmod +x datasets
 #This conditional downloads the reference genome into the scr10 space, into a dog.zip file inside the dog_reference directory within the data directory if the zip file
 #does not already exist. The -o flag specifies the directory where dog.zip will be unzipped. 
 if [ ! -f "$HOME/scr10/data/dog_reference/dog.zip" ]; then
-    ./datasets download genome taxon "Canis familiaris" --reference --filename ~/scr10/data/dog_reference/dog.zip
-    unzip -o ~/scr10/data/dog_reference/dog.zip -d ~/scr10/data/dog_reference
+    ./datasets download genome taxon "Canis familiaris" --reference --filename ${HOME}/scr10/data/dog_reference/dog.zip
+    unzip -o ${HOME}/scr10/data/dog_reference/dog.zip -d ${HOME}/scr10/data/dog_reference
 else
     echo "Dog reference was downloaded."
 fi
@@ -214,10 +215,10 @@ BASE=$(basename "$i" _1_cleaned_trimmed.fastq.gz)
 
 REV="${HOME}/scr10/data/clean/${BASE}_2_cleaned_trimmed.fastq.gz"
 
-SAM_OUTPUT="./output/${BASE}.sam"
+SAM_OUTPUT="${HOME}/scr10/output/${BASE}.sam"
 
 #This conditional ensures that if the .sam file for an accession number already exists, there is no need to map again. 
-if [[ -f ./output/${BASE}_dog-matches.sam ]]; then
+if [[ -f ${HOME}/scr10/output/${BASE}_dog-matches.sam ]]; then
     echo "Skipping ${BASE} — already mapped (./output/${BASE}_dog-matches.sam exists)."
     continue
 fi
@@ -227,7 +228,7 @@ fi
 #Samtools will view the mapped output and make a new file with the matches (*.dog_matches.sam).
 bbmap.sh -Xmx20g ref=${REF} in1=${i} in2=${REV} out=${SAM_OUTPUT} nodisk=t ambiguous=best minid=0.95
 
-samtools view -F 4 -h ${SAM_OUTPUT} > ./output/${BASE}_dog-matches.sam
+samtools view -F 4 -h ${SAM_OUTPUT} > ${HOME}/scr10/output/${BASE}_dog-matches.sam
 
 done
 
