@@ -219,7 +219,7 @@ SAM_OUTPUT="${HOME}/scr10/output/${BASE}.sam"
 
 #This conditional ensures that if the .sam file for an accession number already exists, there is no need to map again. 
 if [[ -f ${HOME}/scr10/output/${BASE}_dog-matches.sam ]]; then
-    echo "Skipping ${BASE} — already mapped (./output/${BASE}_dog-matches.sam exists)."
+    echo "Skipping ${BASE} — already mapped (${HOME}/scr10/output/${BASE}_dog-matches.sam exists)."
     continue
 fi
 
@@ -281,7 +281,10 @@ rm ${HOME}/scr10/data/dog_reference/*.zip ${HOME}/scr10/data/dog_reference/*.sum
 
 rm ${HOME}/scr10/data/dog_reference/ncbi_dataset/data/*.jsonl ${HOME}/scr10/data/dog_reference/ncbi_dataset/data/*.json
 
-#I did not expect this, but the error file had all the information about the mapped reads, while the output file had more information on the behind the scenes during the downloading, cleaning, extracting, etc.
+#removing datasets program
+rm datasets
+
+#The error file had all the information about the mapped reads, while the output file had more information on the behind the scenes during the downloading, cleaning, extracting, etc.
 
 cat assignment_7_228930.err
 
