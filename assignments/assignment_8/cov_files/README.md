@@ -422,14 +422,14 @@ mkdir cov_files
 
 ##do this for all accession directories, making suring to mark parkinsons/control
 
-mv ERR1912964 ERR1912964_parksinsons_kmer_49_69_Aarthi
+mv ERR1912964 ERR1912964_parksinsons_kmer_49_69_AB
 
 
 ##now rename the with_cov.tsv files with what was changed, and move each file into the cov_files directory
 
-cd ERR1912964_parksinsons_kmer_49_69_Aarthi 
+cd ERR1912964_parksinsons_kmer_49_69_AB
 
-mv ERR1912964.with_cov.tsv ../cov_files/ERR1912964_parksinsons_kmer_49_69_Aarthi.with_cov.tsv
+mv ERR1912964.with_cov.tsv ../cov_files/ERR1912964_parksinsons_kmer_49_69_AB.with_cov.tsv
 
 
-Use FileZilla to move the cov_files directory into the BIOCOMPUTING/assignments/assignment directory
+#Use FileZilla to move the cov_files directory into the BIOCOMPUTING/assignments/assignment directory
